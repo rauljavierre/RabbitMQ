@@ -8,11 +8,12 @@ channel = connection.channel()
 # Fanout exchange:  it just broadcasts all the messages it receives to all the queues it knows
 channel.exchange_declare(exchange='logs', exchange_type='fanout')
 
-# Creating queue with random name
+# Creating queue with random name. exclusive=True to delete the queue when process get killed
 result = channel.queue_declare(queue='', exclusive=True)
 queue_name = result.method.queue
 
-# Binding the exchange to the queue
+# A binding is a relationship between an exchange and a queue
+# Binding the queue to the exchange
 channel.queue_bind(exchange='logs', queue=queue_name)
 
 print(' [*] Waiting for logs. To exit press CTRL+C')
