@@ -1,0 +1,5 @@
+# Terminal 1
+python3.8 1_receive.py
+
+# Terminal 2
+python3.8 1_send.py

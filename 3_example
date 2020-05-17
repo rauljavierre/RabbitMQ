@@ -1,0 +1,8 @@
+# Terminal 1
+python3.8 3_receive_logs.py
+
+# Terminal 2
+python3.8 3_receive_logs.py
+
+# Terminal 3 (Se tendría que enviar después de poner en escucha t1 y t2)
+python3.8 3_emit_log.py

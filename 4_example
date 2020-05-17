@@ -1,0 +1,10 @@
+# Terminal 1
+python3.8 4_receive_logs_direct.py warning error
+
+# Terminal 2
+python3.8 4_receive_logs_direct.py info error
+
+# Terminal 3 (Se tendría que enviar después de poner en escucha t1 y t2)
+python3.8 4_emit_log_direct.py error "Run. Run. Or it will explode."
+python3.8 4_emit_log_direct.py info "Just info."
+python3.8 4_emit_log_direct.py warning "Be careful!"
